@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Department Timetable</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      /* Changed background image to local logo.png */
+      background: url('logo.png') no-repeat center;
+      background-size: 120px 120px;
+      background-color: #f0f0f0;
+      margin: 0; padding: 0;
+    }
+    /* Overlay for background */
+    body::before {
+      content: "";
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255,255,255,0.8);
+      z-index: -1;
+    }
+    header, footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    main {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 10px;
+      background: white;
+      border: 1px solid #ccc;
+    }
+    ul {
+      list-style: disc inside;
+      margin: 10px 0 20px;
+      padding: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #004080;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #004080;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Department of Computer Science Timetable</h1>
+</header>
+
+<main>
+
+  <h2>Course Codes & Titles</h2>
+  <ul>
+    <li><a href="#" target="_blank">CS101 - Intro to Programming</a></li>
+    <li><a href="#" target="_blank">CS102 - Data Structures</a></li>
+    <li><a href="#" target="_blank">CS201 - Computer Architecture</a></li>
+    <li><a href="#" target="_blank">CS301 - Operating Systems</a></li>
+  </ul>
+
+  <h2>Faculty</h2>
+  <ul>
+    <li>Dr. Alice Smith (AS)</li>
+    <li>Prof. Bob Johnson (BJ)</li>
+    <li>Dr. Carol Lee (CL)</li>
+  </ul>
+
+  <h2>Weekly Timetable</h2>
+  <table>
+    <tr>
+      <th>Time</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+    </tr>
+    <tr>
+      <td>9:00 - 10:30</td>
+      <td rowspan="2">CS101<br>Dr. Alice Smith</td>
+      <td>CS102<br>Prof. Bob Johnson</td>
+      <td>CS201<br>Dr. Carol Lee</td>
+      <td>CS301<br>Dr. Alice Smith</td>
+      <td>CS102<br>Prof. Bob Johnson</td>
+    </tr>
+    <tr>
+      <td>10:30 - 12:00</td>
+      <!-- Monday cell continues due to rowspan -->
+      <td>CS201<br>Dr. Carol Lee</td>
+      <td>CS102<br>Prof. Bob Johnson</td>
+      <td>CS301<br>Dr. Alice Smith</td>
+      <td>CS101<br>Dr. Alice Smith</td>
+    </tr>
+    <tr>
+      <td>12:00 - 13:00</td>
+      <td colspan="5">Lunch Break</td>
+    </tr>
+    <tr>
+      <td>13:00 - 14:30</td>
+      <td>CS301<br>Dr. Alice Smith</td>
+      <td>CS101<br>Dr. Alice Smith</td>
+      <td>CS102<br>Prof. Bob Johnson</td>
+      <td>CS201<br>Dr. Carol Lee</td>
+      <td>CS301<br>Dr. Alice Smith</td>
+    </tr>
+  </table>
+
+</main>
+
+<footer>
+  &copy; 2025 Example University - Computer Science Dept.
+</footer>
+
+</body>
+</html>

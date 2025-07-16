@@ -1,0 +1,43 @@
+<!-- ✅ File: best_two_average.xhtml -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Best Two Tests Average</title>
+  <script type="text/javascript">
+    function calculateAverage() {
+      var reg = document.getElementById("reg").value.trim();
+      var sub = document.getElementById("sub").value.trim();
+      var t1 = parseFloat(document.getElementById("test1").value);
+      var t2 = parseFloat(document.getElementById("test2").value);
+      var t3 = parseFloat(document.getElementById("test3").value);
+
+      if (reg === "" || sub === "" || isNaN(t1) || isNaN(t2) || isNaN(t3)) {
+        alert("Please fill all fields with valid data.");
+        return false;
+      }
+
+      var tests = [t1, t2, t3];
+      tests.sort(function(a, b) { return b - a; }); // descending
+      var avg = (tests[0] + tests[1]) / 2;
+
+      alert("Average of Best Two Tests: " + avg);
+      return false;
+    }
+  </script>
+</head>
+<body>
+
+  <h2>Student Test Form</h2>
+
+  <form onsubmit="return calculateAverage()">
+    Register No: <input type="text" id="reg" /><br /><br />
+    Subject Code: <input type="text" id="sub" /><br /><br />
+    Test 1 Marks: <input type="text" id="test1" /><br /><br />
+    Test 2 Marks: <input type="text" id="test2" /><br /><br />
+    Test 3 Marks: <input type="text" id="test3" /><br /><br />
+    <input type="submit" value="Calculate Average" />
+  </form>
+
+</body>
+</html>

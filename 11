@@ -1,0 +1,30 @@
+<!-- ✅ File: form_store.php -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Submission</title>
+</head>
+<body>
+
+  <h2>Enter Some Text</h2>
+
+  <form method="post">
+    <input type="text" name="userdata" required>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+
+  <?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $text = trim($_POST["userdata"]);
+    echo "<p>You entered: <strong>$text</strong></p>";
+
+    // Save to file
+    $file = fopen("data.txt", "a");
+    fwrite($file, $text . "\n");
+    fclose($file);
+  }
+  ?>
+
+</body>
+</html>

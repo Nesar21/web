@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab-5</title>
+  <style>
+    header {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .font-style-1 {
+      font-family: Verdana, sans-serif;
+      font-style: normal;
+    }
+
+    .font-style-2 {
+      font-family: 'Times New Roman', serif;
+      font-style: italic;
+    }
+
+    .background {
+      background-image: url('bg.png'); /* small image (like 30x30) */
+      background-repeat: repeat-x; /* repeat only horizontally */
+      height: 60px;                /* small height to show horizontal strip */
+      width: 100%;                 /* full width for tiling effect */
+      border: 1px solid #aaa;
+      margin-bottom: 20px;
+    }
+
+    /* Link styles */
+    a:link {
+      color: blue;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: purple;
+    }
+
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: green;
+    }
+
+    /* Visibility demo */
+    .visible {
+      visibility: visible;
+      background-color: #e0f7fa;
+      padding: 10px;
+      width: fit-content;
+    }
+
+    .hidden {
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>CSS with Suitable Design</header>
+
+  <h1>Different Font Styles</h1>
+  <p class="font-style-1">This is text using Verdana (font-style-1).</p>
+  <p class="font-style-2">This is italic Times New Roman (font-style-2).</p>
+
+  <h1>Background Image Repetition (Horizontal)</h1>
+  <div class="background"></div>
+
+  <h1>Link Styles</h1>
+  <a href="https://leetcode.com/">Anchor link-1</a><br>
+  <a href="https://leetcode.com/">Anchor link-2</a>
+
+  <h1>Element Visibility</h1>
+  <div class="visible">I am visible.</div>
+  <div class="hidden">I am hidden using visibility:hidden.</div>
+
+</body>
+</html>

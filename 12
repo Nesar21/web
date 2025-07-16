@@ -1,0 +1,47 @@
+<!-- ✅ File: login.php -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+</head>
+<body>
+
+  <h2>Login Form</h2>
+
+  <form method="post">
+    Username: <input type="text" name="username" required><br><br>
+    Password: <input type="password" name="password" required><br><br>
+    <input type="submit" value="Login">
+  </form>
+
+  <?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $inputUser = trim($_POST["username"]);
+    $inputPass = trim($_POST["password"]);
+    $found = false;
+
+    $file = fopen("users.txt", "r");
+    while (($line = fgets($file)) !== false) {
+      list($storedUser, $storedPass) = explode(",", trim($line));
+      if ($inputUser === $storedUser && $inputPass === $storedPass) {
+        $found = true;
+        break;
+      }
+    }
+    fclose($file);
+
+    if ($found) {
+      echo "<p><strong>Login Successful!</strong></p>";
+    } else {
+      echo "<p style='color:red;'>Invalid Username or Password.</p>";
+    }
+  }
+  ?>
+
+</body>
+</html>
+
+
+----------users.txt
+admin,admin123
+user1,pass123

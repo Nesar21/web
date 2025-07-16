@@ -1,0 +1,58 @@
+<!-- ✅ File: registration.xhtml -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Registration Page</title>
+  <script type="text/javascript">
+    function validateForm() {
+      var userId = document.getElementById("userid").value.trim();
+      var name = document.getElementById("name").value.trim();
+      var password = document.getElementById("password").value;
+      var email = document.getElementById("email").value.trim();
+
+      // User ID: 5 to 12 characters
+      if (userId.length < 5 || userId.length > 12) {
+        alert("User ID must be 5 to 12 characters long.");
+        return false;
+      }
+
+      // Name: only alphabets, min 15 characters
+      if (!/^[a-zA-Z\s]{15,}$/.test(name)) {
+        alert("Name must be at least 15 alphabetic characters.");
+        return false;
+      }
+
+      // Password: 8+ characters, 1 uppercase, 1 special character, alphanumeric
+      var passRegex = /^(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+      if (!passRegex.test(password)) {
+        alert("Password must be at least 8 characters, with one uppercase, one number, and one special character.");
+        return false;
+      }
+
+      // Email: basic format validation
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Enter a valid email address.");
+        return false;
+      }
+
+      alert("All fields are valid!");
+      return true;
+    }
+  </script>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form onsubmit="return validateForm()">
+    User ID: <input type="text" id="userid" /><br /><br />
+    Name: <input type="text" id="name" /><br /><br />
+    Password: <input type="password" id="password" /><br /><br />
+    Email: <input type="text" id="email" /><br /><br />
+    <input type="submit" value="Register" />
+  </form>
+
+</body>
+</html>

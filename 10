@@ -1,0 +1,47 @@
+-----------10a
+<?php
+echo "Today's date is this: " . date("d-m-Y");
+?>
+
+
+---------10b
+
+<!-- ✅ File: prime_check.php -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prime Number Checker</title>
+</head>
+<body>
+  <h2>Check if a Number is Prime</h2>
+
+  <form method="post">
+    Enter a number: <input type="number" name="number" required>
+    <input type="submit" value="Check">
+  </form>
+
+  <?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $num = $_POST["number"];
+
+    if ($num < 2) {
+      echo "<p>$num is not a prime number.</p>";
+    } else {
+      $isPrime = true;
+      for ($i = 2; $i <= sqrt($num); $i++) {
+        if ($num % $i == 0) {
+          $isPrime = false;
+          break;
+        }
+      }
+
+      if ($isPrime) {
+        echo "<p>$num is a <strong>prime</strong> number.</p>";
+      } else {
+        echo "<p>$num is <strong>not</strong> a prime number.</p>";
+      }
+    }
+  }
+  ?>
+</body>
+</html>

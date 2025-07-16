@@ -1,0 +1,64 @@
+<!-- ✅ File: 2b-main.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Framed Department Page</title>
+</head>
+<frameset cols="20%,80%">
+  <frame src="2b-2_nav.html" name="leftFrame">
+  <frame src="2b-3_home.html" name="rightFrame">
+</frameset>
+</html>
+
+<!-- ✅ File: 2b-2_nav.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navigation</title>
+</head>
+<body>
+  <h3>Navigation Menu</h3>
+  <ul>
+    <li><a href="2b-3_home.html" target="rightFrame">Home</a></li>
+    <li><a href="2b-4_about.html" target="rightFrame">About</a></li>
+    <li><a href="2b-5_contact.html" target="rightFrame">Contact</a></li>
+  </ul>
+</body>
+</html>
+
+<!-- ✅ File: 2b-3_home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+</head>
+<body>
+  <h2>Welcome to the Department Portal</h2>
+  <p>This is the home page content.</p>
+</body>
+</html>
+
+<!-- ✅ File: 2b-4_about.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About</title>
+</head>
+<body>
+  <h2>About the Department</h2>
+  <p>This department offers quality education in computer science and engineering.</p>
+</body>
+</html>
+
+<!-- ✅ File: 2b-5_contact.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact</title>
+</head>
+<body>
+  <h2>Contact Us</h2>
+  <p>Email: csdept@university.edu</p>
+  <p>Phone: +91-9876543210</p>
+</body>
+</html>

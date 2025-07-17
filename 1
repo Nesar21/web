@@ -4,53 +4,60 @@
   <meta charset="UTF-8" />
   <title>Department Timetable</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      /* Changed background image to local logo.png */
-      background: url('logo.png') no-repeat center;
-      background-size: 120px 120px;
-      background-color: #f0f0f0;
-      margin: 0; padding: 0;
-    }
-    /* Overlay for background */
-    body::before {
-      content: "";
-      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(255,255,255,0.8);
-      z-index: -1;
-    }
-    header, footer {
-      background: #004080;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-    main {
-      max-width: 700px;
-      margin: 20px auto;
-      padding: 10px;
-      background: white;
-      border: 1px solid #ccc;
-    }
-    ul {
-      list-style: disc inside;
-      margin: 10px 0 20px;
-      padding: 0;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    th, td {
-      border: 1px solid #004080;
-      padding: 8px;
-      text-align: center;
-    }
-    th {
-      background: #004080;
-      color: white;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background: url('627107.jpg') no-repeat center center fixed;
+    background-size: cover; 
+    background-color: #ffcccc;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Overlay for background */
+  body::before {
+    content: "";
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.8);
+    z-index: -1;
+  }
+
+  header, footer {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+  main {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ccc;
+  }
+
+  ul {
+    list-style: disc inside;
+    margin: 10px 0 20px;
+    padding: 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 1px solid #004080;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background: #004080;
+    color: white;
+  }
   </style>
 </head>
 <body>
@@ -96,7 +103,6 @@
     </tr>
     <tr>
       <td>10:30 - 12:00</td>
-      <!-- Monday cell continues due to rowspan -->
       <td>CS201<br>Dr. Carol Lee</td>
       <td>CS102<br>Prof. Bob Johnson</td>
       <td>CS301<br>Dr. Alice Smith</td>
